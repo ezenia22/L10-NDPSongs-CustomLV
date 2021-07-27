@@ -77,13 +77,29 @@ public class Song implements Serializable {
             starsString = "*****";
         } else if (stars == 4){
             starsString = "****";
-        }
+       }
 
         //or
         for(int i = 0; i < stars; i++){
             starsString += "*";
         }
         return title + "\n" + singers + " - " + yearReleased + "\n" + starsString;
+    }
 
+    public String theStars(int stars) {
+        switch(stars) {
+            case 1:
+                return "*";
+            case 2:
+                return "* *";
+            case 3:
+                return "* * *";
+            case 4:
+                return "* * * *";
+            case 5:
+                return "* * * * *";
+            default:
+                return "";
+        }
     }
 }
